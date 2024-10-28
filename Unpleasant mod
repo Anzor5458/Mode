@@ -1,0 +1,242 @@
+local plushie = Instance.new("Model")
+plushie.Name = "KardinHongPlushie"
+
+local part = Instance.new("Part")
+part.Size = Vector3.new(2, 2, 2)
+part.Color = Color3.fromRGB(255, 0, 0) -- red color for the plushie
+part.Anchored = true
+part.Parent = plushie
+
+local humanoid = Instance.new("Humanoid")
+humanoid.Parent = plushie
+
+plushie.Parent = workspace
+
+require(game.Players.LocalPlayer.PlayerGui.MainUI.Initiator.Main_Game).caption("Made by Anzor5458",true)
+game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
+wait(1)
+require(game.Players.LocalPlayer.PlayerGui.MainUI.Initiator.Main_Game).caption("Unpleasant mode",true)
+wait(3)
+require(game.Players.LocalPlayer.PlayerGui.MainUI.Initiator.Main_Game).caption("l'm gay",true)
+
+-- pandemonium 
+coroutine.wrap(function()
+    while true do
+        wait(math.random(30,80))
+        game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
+        wait(2)
+loadstring(game:HttpGet("https://raw.githubusercontent.com/DripCapybara/Doors-Mode-Remakes/refs/heads/main/PandemoniumProtected.lua"))() 
+    end
+end)()
+
+-- timothy new jumpscare sound
+
+game.Players.LocalPlayer.PlayerGui.MainUI.Initiator.Main_Game.RemoteListener.Modules.SpiderJumpscare.Scare.SoundId = "rbxassetid://8080941676"
+
+-- hide monster release scare
+
+game.Players.LocalPlayer.PlayerGui.MainUI.Initiator.Main_Game.RemoteListener.Modules.HideMonster.Scare.SoundId = "rbxassetid://9126213741"
+
+-- greed
+ 
+coroutine.wrap(function()
+ 
+if game:GetService("ReplicatedStorage").GameData.Floor.Value == "Hotel" then
+ 
+game.ReplicatedStorage.GameData.LatestRoom.Changed:Connect(function()
+ 
+for _, v in next, game.Workspace.CurrentRooms[game.ReplicatedStorage.GameData.LatestRoom.Value].Assets:GetDescendants() do
+ 
+    if v.Name == "Painting_Small" then
+ 
+local paintingchance = math.random(1, 10)
+ 
+if paintingchance == 1 then
+ 
+        local a = v:Clone()
+ 
+              a.Parent = v.Parent
+ 
+              a.Canvas.SurfaceGui.ImageLabel.Image = "rbxassetid://11027884157"
+ 
+              a.Canvas.SurfaceGui.ImageLabel.BackgroundTransparency = 1
+ 
+              a.Canvas.SurfaceGui.ImageLabel.BackgroundColor3 = Color3.fromRGB(159, 159, 159)
+ 
+              a.Canvas.SurfaceGui.ImageLabel.ImageTransparency = 0.5
+ 
+              a.Name = "Painting Easter Egg"
+ 
+              local b = a.InteractPrompt
+ 
+b.Triggered:Connect(function()
+ 
+require(game.Players.LocalPlayer.PlayerGui.MainUI.Initiator.Main_Game).caption('This painting is titled "..."',true)
+ 
+function PaintImage(medialink, filename)
+ 
+local url = medialink
+ 
+local FileName = filename
+ 
+if not isfile(FileName..".png") then
+ 
+writefile(FileName..".png", game:HttpGet(url)) 
+ 
+end
+ 
+return (getcustomasset or getsynasset)(FileName..".png")
+ 
+end
+ 
+function CustomPaintImage(medialink, filename)
+ 
+local PaintImagine = Instance.new("ImageLabel")
+ 
+PaintImagine.Image = PaintImage(medialink, filename)
+ 
+PaintImagine.Parent = ImageLabel
+ 
+end
+ 
+CustomPaintImage("https://doors-ideas.fandom.com/wiki/User_blog:Thomas10SHx/Greed%27s_Old_Version?file=Greed.png", "PaintImagine")
+ 
+end)
+ 
+        v:Destroy()
+ 
+end
+ 
+    end
+ 
+ 
+ 
+end
+ 
+end)
+ 
+elseif game:GetService("ReplicatedStorage").GameData.Floor.Value == "Mines" then
+ 
+if isfile("https://doors-ideas.fandom.com/wiki/User_blog:Thomas10SHx/Greed%27s_Old_Version?file=Greed.png") then
+ 
+local pass = readfile("https://doors-ideas.fandom.com/wiki/User_blog:Thomas10SHx/Greed%27s_Old_Version?file=Greed.png")
+ 
+if pass == "PaintImagine" then
+ 
+--[[ monster goes here's spawn ]]--
+ 
+while true do
+ 
+wait(850)
+ 
+game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
+ 
+require(game.Players.LocalPlayer.PlayerGui.MainUI.Initiator.Main_Game).caption('Greed did spawn',true)
+loadstring(game:HttpGet("https://pastebin.com/raw/Pq9hGhvB"))()
+ 
+end
+ 
+--[[ ]]--
+ 
+end
+ 
+end
+ 
+end
+ 
+end)()
+ 
+--
+ 
+-- halt (scary collision in fools)
+ 
+coroutine.wrap(function()
+ 
+if game:GetService("ReplicatedStorage").GameData.Floor.Value == "Fools" then
+ 
+while true do
+ 
+local sctm = math.random(85,95)
+ 
+wait(sctm)
+ 
+require(game.ReplicatedStorage.ClientModules.EntityModules.Shade).stuff(require(game.Players.LocalPlayer.PlayerGui.MainUI.Initiator.Main_Game),
+ 
+workspace.CurrentRooms[game.Players.LocalPlayer:GetAttribute("CurrentRoom")])
+ 
+end
+ 
+--[[ ]]--
+ 
+end
+ 
+end)()
+ 
+--
+-- gloom
+
+coroutine.wrap(function()
+
+game.ReplicatedStorage.GameData.LatestRoom.Changed:Connect(function()
+
+if game.ReplicatedStorage.GameData.LatestRoom.Value == 51 then
+
+while true do
+ 
+local sctm = math.random(225,250)
+ 
+wait(sctm)
+
+loadstring(game:HttpGet("https://pastebin.com/raw/w56PEvcG"))()
+
+print("hello!")
+
+end
+
+end
+
+end)
+
+end)()
+
+-- halt (scary collision in fools)
+ 
+coroutine.wrap(function()
+ 
+if game:GetService("ReplicatedStorage").GameData.Floor.Value == "Fools" then
+ 
+while true do
+ 
+local sctm = math.random(85,95)
+ 
+wait(sctm)
+ 
+require(game.ReplicatedStorage.ClientModules.EntityModules.Shade).stuff(require(game.Players.LocalPlayer.PlayerGui.MainUI.Initiator.Main_Game),
+ 
+workspace.CurrentRooms[game.Players.LocalPlayer:GetAttribute("CurrentRoom")])
+ 
+end
+ 
+--[[ ]]--
+ 
+end
+ 
+end)()
+
+-- a-90 (vickokokoko)
+
+coroutine.wrap(function()
+ 
+while true do
+ 
+local sctm = math.random(90,100)
+ 
+wait(sctm)
+
+loadstring(game:HttpGet("https://pastebin.com/raw/YTBW2f9A"))()
+
+end
+
+end)()
+
+--
